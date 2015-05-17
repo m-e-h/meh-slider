@@ -35,18 +35,25 @@ class Slider_And_Sliders extends Slider_And_Posts {
 
 			/* Open the slider wrapper. */
 
-			//$output .= '<div class="meh-slider">';
 
 			$output .= '<div class="meh-slider js-flickity" data-flickity-options=\'{ "autoPlay": true, "wrapAround": true }\'>';
 
 			/* Loop through each of the slider and format the output. */
 			foreach ( $slider as $slide ) {
 
-				// $output .= '<li class="slide-title">' . $slide['title'] . '</li>';
+				$output .= '<div class="meh-slider__cell">';
 
-				$output .= '<img src="' . $slide['thumb_url'] . '"/>';
+				$output .= '<img class="meh-slider__image" src="' . $slide['thumb_url'] . '"/>';
 
-				// $output .= '<div class="slide-content">' . $slide['content'] . '</div>';
+				$output .= '<div class="meh-slider__text">';
+
+				$output .= '<h2 class="slide-title">' . $slide['title'] . '</h2>';
+
+				$output .= '<div class="slide-content">' . $slide['content'] . '</div>';
+
+				$output .= '</div>';
+
+				$output .= '</div>';
 			}
 
 			/* Close the slider wrapper. */

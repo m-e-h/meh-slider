@@ -112,8 +112,8 @@ final class Slider_Load {
 
 				/* Register the JS file. Load later if needed. */
 		wp_register_script(
-			'flickityjs',
-			SLIDER_URI . 'js/flickity.js',
+			'flickity',
+			SLIDER_URI . 'js/flickity.pkgd.min.js',
 			array(),
 			null,
 			true
@@ -121,7 +121,7 @@ final class Slider_Load {
 
 		/* Register the JS file. Load later if needed. */
 		wp_register_script(
-			'sliderjs',
+			'meh-slider',
 			SLIDER_URI . 'js/mehslider.js',
 			array(),
 			null,
@@ -136,12 +136,12 @@ final class Slider_Load {
 
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(
-			'slidercss',
+			'meh-slider',
 			SLIDER_URI . "css/meh-slider.css"
 		);
 
-		wp_enqueue_script( 'flickityjs' );
-		wp_enqueue_script( 'sliderjs' );
+		wp_enqueue_script( 'flickity' );
+		//wp_enqueue_script( 'meh-slider' );
 	}
 
 	/**

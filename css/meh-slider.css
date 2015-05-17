@@ -2,20 +2,123 @@
   background: #FAFAFA;
 }
 
-.meh-slider img {
-  //width: 66%;
-  //height: 200px;
+.meh-slider__cell {
+  width: 100%;
+  //height: 600px;
   //margin-right: 10px;
-  background: #8C8;
+  background: #586D78;
   counter-increment: gallery-cell;
 }
 
 /* cell number */
-.meh-slider img:before {
+/*.meh-slider__cell:before {
   display: block;
   text-align: center;
   content: counter(gallery-cell);
-  //line-height: 200px;
+  //line-height: 600px;
   font-size: 80px;
   color: white;
+}*/
+
+.meh-slider__text {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+  //text-align: center;
+  width: 100%;
 }
+
+.slide-title {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slide-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.meh-slider__image {
+  vertical-align: middle;
+  opacity: .5;
+}
+
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+
+.meh-slider__cell.is-selected .slide-title {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.meh-slider__cell.is-selected .slide-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
