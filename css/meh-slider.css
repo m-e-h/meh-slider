@@ -1,5 +1,6 @@
 .meh-slider {
   background: #FAFAFA;
+    margin-bottom: 48px;
 }
 
 .meh-slider__cell {
@@ -23,20 +24,25 @@
 .meh-slider__text {
   z-index: 1;
   position: absolute;
-  top: 50%;
   color: #ffffff;
   //text-align: center;
   width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .slide-title {
-  max-width: 600px;
+  max-width: 300px;
   margin: 0 auto;
+  font-size: 20px;
 }
 
 .slide-content {
-  max-width: 600px;
+  max-width: 300px;
   margin: 0 auto;
+  font-size: 15px;
 }
 
 .meh-slider__image {
@@ -44,6 +50,29 @@
   opacity: .5;
 }
 
+button.flickity-prev-next-button {
+    display: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 48em) {
+.slide-title {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+.slide-content {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+button.flickity-prev-next-button {
+    display: block;
+}
+
+}
 
 @-webkit-keyframes fadeInDownBig {
   0% {

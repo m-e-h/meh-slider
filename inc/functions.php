@@ -57,14 +57,14 @@ function slider_show_image_sizes($sizes) {
  */
 function slider_get_slider( $args = array() ) {
 
-	/* Allow types other than 'tabs' or 'toggle'. */
+	/* Allow types other than 'slider' or 'toggle'. */
 	$allowed = array_keys( slider_get_allowed_types() );
 
-	/* Clean up the type and allow typos of 'tabs' and 'toggle'. */
+	/* Clean up the type and allow typos of 'slider' and 'toggle'. */
 	$args['type'] = sanitize_key( strtolower( $args['type'] ) );
 
-	if ( 'tab' === $args['type'] )
-		$args['type'] = 'tabs';
+	if ( 'slider' === $args['type'] )
+		$args['type'] = 'slider';
 
 	elseif ( 'toggles' === $args['type'] )
 		$args['type'] = 'toggle';
@@ -72,7 +72,7 @@ function slider_get_slider( $args = array() ) {
 	/* ================================== */
 
 	/* Only allow a 'type' from the $allowed_types array. */
-	$type = $args['type'] = ( isset( $args['type'] ) && in_array( $args['type'], $allowed ) ) ? $args['type'] : 'tabs';
+	$type = $args['type'] = ( isset( $args['type'] ) && in_array( $args['type'], $allowed ) ) ? $args['type'] : 'slider';
 
 	/**
 	 * Developers can overwrite the slider object at this point.  This is basically to bypass the
