@@ -11,15 +11,7 @@
   counter-increment: gallery-cell;
 }
 
-/* cell number */
-/*.meh-slider__cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  //line-height: 600px;
-  font-size: 80px;
-  color: white;
-}*/
+
 
 .meh-slider__text {
   z-index: 1;
@@ -61,13 +53,11 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
 .slide-title {
   max-width: 600px;
-  margin: 0 auto;
   font-size: 50px;
 }
 
 .slide-content {
   max-width: 600px;
-  margin: 0 auto;
   font-size: 18px;
 }
 
