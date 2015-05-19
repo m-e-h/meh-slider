@@ -128,11 +128,18 @@ final class Slider_Load {
 			true
 		);
 
+		wp_enqueue_script( 'flickity' );
+		//wp_enqueue_script( 'meh-slider' );
+
+
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(
 			'flickitycss',
 			SLIDER_URI . "css/flickity.css"
 		);
+
+		if ( current_theme_supports( 'meh-slider', 'styles' ) )
+			return;
 
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(
@@ -140,8 +147,6 @@ final class Slider_Load {
 			SLIDER_URI . "css/meh-slider.css"
 		);
 
-		wp_enqueue_script( 'flickity' );
-		//wp_enqueue_script( 'meh-slider' );
 	}
 
 	/**
