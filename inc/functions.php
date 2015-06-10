@@ -37,7 +37,7 @@ function slider_get_allowed_types() {
 add_filter('image_size_names_choose', 'slider_show_image_sizes');
 
 function slider_add_image_sizes() {
-    add_image_size( 'slider-jumbo', 1920, 600, true );
+    add_image_size( 'slider-jumbo', 1920, 720, true );
 }
 add_action( 'init', 'slider_add_image_sizes' );
 
