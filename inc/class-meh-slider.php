@@ -43,7 +43,7 @@ class Slider_And_Sliders extends Slider_And_Posts {
 
 				$output .= '<div class="meh-slider__cell">';
 
-				$output .= '<img class="meh-slider__image" src="' . $slide['thumb_url'] . '"/>';
+				$output .= '<img class="data-flickity-lazyload meh-slider__image" src="' . $slide['thumb_url'] . '"/>';
 
 				$output .= '<div class="meh-slider__text">';
 
