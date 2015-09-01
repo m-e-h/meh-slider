@@ -41,7 +41,7 @@ class Slider_And_Sliders extends Slider_And_Posts {
 			/* Loop through each of the slider and format the output. */
 			foreach ( $slider as $slide ) {
 
-				$output .= '<div class="meh-slider__cell">';
+				$output .= '<div class="meh-slider__cell gallery-cell">';
 
 				$output .= '<img class="data-flickity-lazyload meh-slider__image" src="' . $slide['thumb_url'] . '"/>';
 
