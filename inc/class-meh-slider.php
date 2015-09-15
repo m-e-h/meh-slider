@@ -36,14 +36,14 @@ class Slider_And_Sliders extends Slider_And_Posts {
 			/* Open the slider wrapper. */
 
 
-			$output .= '<div class="meh-slider gallery js-flickity" data-flickity-options=\'{ "freeScroll": true, "wrapAround": true }\'>';
+			$output .= '<div class="meh-slide gallery js-flickity" data-flickity-options=\'{ "freeScroll": true, "wrapAround": true }\'>';
 
 			/* Loop through each of the slider and format the output. */
 			foreach ( $slider as $slide ) {
 
-				$output .= '<div class="meh-slider__cell gallery-cell">';
+				$output .= '<div class="meh-slide__cell gallery-cell">';
 
-				$output .= '<img class="data-flickity-lazyload meh-slider__image" src="' . $slide['thumb_url'] . '"/>';
+				$output .= '<img class="data-flickity-lazyload meh-slide__image" src="' . $slide['thumb_url'] . '"/>';
 
 				$output .= '<div class="meh-slider__text">';
 
