@@ -1,3 +1,25 @@
-.meh-slider {
-  background: #FAFAFA;
+.meh-slide.gallery {
+	margin-bottom: 0;
+	background: #EEE;
+}
+
+.gallery-cell {
+	width: 100%;
+	height: auto;
+	margin-right: 10px;
+	counter-increment: gallery-cell;
+}
+
+@media screen and (min-width: 52em) {
+	.gallery-cell {
+		width: 66%;
+	}
+}
+
+.meh-slider__text {
+	display: none;
+}
+
+.flickity-page-dots {
+	display: none;
 }
