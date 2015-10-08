@@ -33,7 +33,7 @@ class Slider_Widget extends WP_Widget {
 		);
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 			'slider',                    // $this->id_base
 			__( 'Slider', 'slider' ),  // $this->name
 			$widget_options,               // $this->widget_options
